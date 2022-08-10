@@ -12,11 +12,13 @@ In the fall of 2021, I set out to project fantasy points for college football. T
 The **cfdb** package in Python provided functionality to extract data from a college football database. Additional data processing was necessary to get the data ready for model training in R.
 
 **Player Fantasy Point Projections (R)**
+
 In R, I read in historical data generated in Python and performed additional work. This included calculating historical fantasy points and pulling in data from other sources (i.e., injury data to exclude that week's injured players; betting spread data used as model features in linear regression model). The linear regression model was trained separately for each position (QB, RB, WR). The model's results were considered average outcomes for a given week. However, those that play DFS know that it is important to understand the full distribution of possible outcomes because we want to predict players who score in their 99th percentile. Thus, the model's results were used as the mean in the multivariate distribution calculating teammate correlation. 
 
 If the QB scores a ton of fantasy points, it usually means that a WR also does well. I used the multivariate distribution to capture historical correlations between all combinations of teammates. Then, *n* simulations were ran for each game using the results of linear regression and the multivariate correlation matrices. The goal of the simulations was to capture each player's "ceiling" outcome. 
 
 **Linear Programming (Python)**
+
 After simulating games several times, the results were used in a linear programming problem. This problem was similar to the knapsack problem where I wanted to maximize fantasy points under several constraints such as DraftKings salary and positional limits. Each simulation produced 1 optimal lineup, and the optimal lineups were summarized to show how often each player appeared in the "best" lineup.
 
 **Results and Discussion**
