@@ -9,6 +9,7 @@ I used both predictive and prescriptive analytics in an attempt to predict weekl
 In the fall of 2021, I set out to project fantasy points for college football. Those familiar with Daily Fantasy Sports (DFS) know that optimizing lineups is crucial in order to win money on sites like DraftKings (DK). Projecting fantasy points required scraping historical data, projecting player stats using models trained on those historical stats, and producing optimal lineups using linear optimization.
 
 **College Football Database API Scraping (Python)**
+
 The **cfdb** package in Python provided functionality to extract data from a college football database. Additional data processing was necessary to get the data ready for model training in R.
 
 **Player Fantasy Point Projections (R)**
