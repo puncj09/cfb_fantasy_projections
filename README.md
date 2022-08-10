@@ -5,6 +5,7 @@ TL;DR --
 I used both predictive and prescriptive analytics in an attempt to predict weekly fantasy points. These predictions were used to produce optimal daily fantasy lineups to try to win the large prize on DraftKings.
 
 **Background**
+
 In the fall of 2021, I set out to project fantasy points for college football. Those familiar with Daily Fantasy Sports (DFS) know that optimizing lineups is crucial in order to win money on sites like DraftKings (DK). Projecting fantasy points required scraping historical data, projecting player stats using models trained on those historical stats, and producing optimal lineups using linear optimization.
 
 **College Football Database API Scraping (Python)**
